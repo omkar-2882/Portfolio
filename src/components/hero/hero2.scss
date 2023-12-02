@@ -1,0 +1,188 @@
+@import "../../app.scss";
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+    padding: 1rem 0.2rem;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    position: relative !important;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 3rem;
+        overflow-y: hidden;
+
+
+        @include mobile {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: 2;
+            flex: 2;
+            gap: 2.5rem;
+
+            @include mobile {
+                // flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .myname {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: .5rem;
+            }
+
+            .greeting {
+                font-size: 2rem;
+                letter-spacing: .2rem;
+                font-weight: bold;
+                cursor: pointer;
+
+                @include tablet {
+                    // text-align: center;
+                    font-size: 1.2rem;
+                }
+
+                @include mobile {
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+
+            .name {
+                font-size: 2.2rem !important;
+                letter-spacing: 1rem;
+                color: rgb(131, 51, 212);
+                // background-color: rgb(255, 255, 255);
+                // padding: 0.3rem 1rem;
+                border-radius: 15px;
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+                // font-family: Blanka !important;
+
+                @include tablet {
+                    letter-spacing: .5rem;
+                    font-size: 1.5rem !important;
+                }
+
+                @include mobile {
+                    flex-wrap: nowrap;
+                    text-align: center;
+                    font-size: 1.5rem !important;
+                }
+            }
+
+            .skill {
+                font-size: 6rem;
+                cursor: pointer;
+
+                @include desktop {
+                    font-size: 4rem;
+                }
+
+                @include tablet {
+                    // text-align: center;
+                    font-size: 3rem;
+                }
+
+                @include mobile {
+                    text-align: center;
+                    font-size: 3rem;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                button {
+                    padding: 20px;
+                    border: 2px solid transparent;
+                    border-radius: 5px;
+                    background-color: rgb(131, 51, 212);
+                    color: white;
+                    font-size: 1.2rem;
+                    // margin-right: 1rem;
+                    font-weight: 300;
+                    cursor: pointer;
+                    transition: all .2s;
+                }
+
+                button:hover {
+                    background-color: transparent;
+                    color: white;
+                    border: 2px solid white;
+                }
+            }
+        }
+
+        .imageContainer {
+            // flex: 2;
+            width: 50%;
+            min-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                border-radius: 600px;
+                width: 100%;
+                // width:70%;
+                // height: 600px;
+                // object-fit:cover;
+            }
+
+            @include tablet {
+                width: 65%;
+            }
+        }
+
+    }
+
+    .slidingTextContainer {
+        position: absolute;
+        font-size: 30vh;
+        // bottom: -120px;
+        top: 0px;
+        left: 0px;
+        white-space: nowrap;
+        color: #ffffff16;
+        width: 50%;
+        font-weight: bold;
+        z-index: 1;
+    }
+
+    .scrollButton {
+        position: absolute;
+        width: 4rem;
+        bottom: 2rem;
+        right: 1rem;
+
+        @include mobile {
+            width: 2.6rem;
+        }
+    }
+
+    @include tablet {
+        margin: 0;
+    }
+}

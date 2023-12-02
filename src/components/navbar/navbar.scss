@@ -4,19 +4,21 @@
   height: 100px;
 
   .wrapper {
-    max-width: 1366px;
-    margin: auto;
+    // max-width: 1366px;
+    // margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    padding: 0 2rem;
+    padding-left: 8rem;
 
     @include mobile {
       justify-content: flex-end;
       padding: 20px;
     }
 
-    span {
+    h1 {
       font-weight: bold;
 
       @include mobile {
@@ -28,9 +30,19 @@
       display: flex;
       gap: 20px;
 
-      img {
-        width: 18px;
-        height: 18px;
+      a{
+        text-decoration: none;
+        transition: all ease-in-out .2s;
+      }
+
+      a:hover{
+        transform: scale(1.3);
+      }
+
+      i,img {
+        font-size: 2rem;
+        width: 30px;
+        height: 30px;
       }
     }
   }

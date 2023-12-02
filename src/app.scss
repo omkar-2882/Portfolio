@@ -10,9 +10,16 @@ html {
   font-family: "DM Sans", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  background-color: #0c0c1d;
+  background-color: #1c1b25;
+  background-image: url("/stars.png");
+  background-repeat: repeat-y;
   color: lightgray;
+  font-size: 16px;
 }
 
 a {
@@ -27,16 +34,30 @@ section {
   overflow: hidden;
 }
 
+#Projects {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 160vh;
+  scroll-snap-align: start;
+}
+
+#Contact {
+  
+}
+
 @mixin mobile {
   @media (max-width: 738px) {
     @content;
   }
 }
+
 @mixin tablet {
   @media (max-width: 1024px) {
     @content;
   }
 }
+
 @mixin desktop {
   @media (max-width: 1366px) {
     @content;

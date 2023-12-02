@@ -3,30 +3,37 @@ import "./navbar.scss";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+
+  const links = {
+    github: "https://github.com/omkar-2882",
+    leetcode: "https://leetcode.com/omkar_2882/",
+    linkedIn: "https://www.linkedin.com/in/omkar-gawde-217559255/",
+    gmail: "omkar.gawde2002@gmail.com",
+  }
+
   return (
     <div className="navbar">
-      {/* Sidebar */}
-      <Sidebar/>
+      <Sidebar />
       <div className="wrapper">
-        <motion.span
+        <motion.h1
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Lama Dev
-        </motion.span>
+          Omkar Gawde
+        </motion.h1>
         <div className="social">
-          <a href="#">
-            <img src="/facebook.png" alt="" />
+          <a href={links.github} target="_blank">
+            <i class="fa-brands fa-github" alt="github"></i>
           </a>
-          <a href="#">
-            <img src="/instagram.png" alt="" />
+          <a href={links.leetcode} alt="leetcode" target="_blank">
+            <img src="/leetcode.svg"/>
           </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
+          <a href={links.linkedIn} alt="linkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
+          <a href={"mailto:"+links.gmail} alt="gmail" target="_blank">
+            <img src="/gmail.svg"/>
           </a>
         </div>
       </div>
