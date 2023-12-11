@@ -61,7 +61,7 @@ const Hero2 = () => {
                         variants={textVariants}
                         initial="initial"
                         animate="animate"
-                        style={{ y: yText }}
+                    // style={{ y: yText }}
                     >
                         <div className="myname">
                             {/* <AnimatedTextCharacter text="Hi I Am" cl="greeting"/> */}
@@ -73,17 +73,20 @@ const Hero2 = () => {
                         <motion.h1 className='skill' variants={textVariants}>Web Developer</motion.h1>
                         <motion.div variants={textVariants} className="buttons">
                             <motion.button variants={textVariants}>
-                                Resume
+                                <a href="https://drive.google.com/file/d/1hzmKplVrNvBZhjcxxFL01ZiEBQ7nTF_f/view?usp=drive_link" target="_blank">Resume</a>
                             </motion.button>
-                            <motion.button variants={textVariants}>Contact Me</motion.button>
+                            <motion.button variants={textVariants}>
+                                <a href="#Contact">Contact Me</a>
+                            </motion.button>
                         </motion.div>
 
                     </motion.div>
                     <motion.div className="imageContainer"
-                        style={{ y: yText }}
+                    // style={{ y: yText }}
                     >
-                        <img src="/Programmer.png" alt="" />
-                        {/* <img src="/profilePic.jpeg" alt="" /> */}
+                        {/* <img src="/omkar.jpg" alt="" /> */}
+                        {/* <img src="/Programmer.png" alt="" /> */}
+                        <img src="/profilePic.jpeg" alt="" />
                     </motion.div>
                 </div>
                 <motion.div

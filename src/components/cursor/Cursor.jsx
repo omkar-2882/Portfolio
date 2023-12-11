@@ -17,11 +17,23 @@ const Cursor = () => {
     };
   }, []);
 
+  const cursor = {
+    x: position.x, 
+    y: position.y,
+    transition: {
+      ease: "linear",
+      duration: 0,
+      delay: 0,
+    }
+  }
+
   return (
     <motion.div
       className="cursor"
-      animate={{ x: position.x+10, y: position.y+10 }}
-    ></motion.div>
+      animate={cursor}
+    >
+      {/* <img src="/cursorpurple.png" alt="" /> */}
+    </motion.div>
   );
 };
 

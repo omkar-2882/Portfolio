@@ -41,7 +41,7 @@ const Project = (props) => {
             }
         },
         initial: {
-            opacity: .8,
+            opacity: .9,
             y: "-100%",
             transition: {
                 ease: "easeOut",

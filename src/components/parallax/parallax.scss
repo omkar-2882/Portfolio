@@ -16,6 +16,7 @@
     font-size: 7rem;
     z-index: 2;
     padding: 1rem 0;
+    margin-bottom: 3rem;
     text-align: center;
 
     @include mobile {
@@ -28,37 +29,16 @@
     background-image: url("/mountainimg.png");
     background-size: cover;
     background-position: bottom;
-    // background: linear-gradient(#0c0c1d,#0c0c1d, #0c0c1d);
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 1;
 
     @include mobile {
-      background-size: contain;
-      background-repeat: no-repeat;
+      // background-size: contain;
     }
   }
-
-  // .planets {
-  //   background-size: contain;
-  //   background-repeat: no-repeat;
-  //   // background-position: 0rem -6rem;
-  //   width: 100%;
-  //   height: 100%;
-  //   position: absolute;
-  //   z-index: 2;
-
-  //   @include tablet{
-  //     background-size: 100%;
-  //     background-position: 0rem 0rem;
-  //   }
-
-  //   @include mobile {
-  //     background-size: contain;
-  //     background-repeat: no-repeat;
-  //   }
-  // }
 
   .planets {
     position: absolute;

@@ -85,7 +85,7 @@
         background-color: orange;
         border: none;
         font-size: 24px;
-        cursor: pointer;
+        //cursor: none;
 
         @include mobile {
           font-size: 16px;
@@ -130,7 +130,7 @@
         padding: 10px;
         background-color: orange;
         border: none;
-        cursor: pointer;
+        //cursor: none;
 
         @include mobile {
           background-color: transparent;

@@ -1,66 +1,87 @@
 @import "../../app.scss";
 
 .contact {
-  height: 100%;
-  max-width: 1366px;
-  margin: auto;
   display: flex;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  padding: 1rem 2rem;
+  height: 100%;
+  margin: 1rem 0;
+  // max-width: 1366px;
+  gap: 3rem;
 
   @include mobile {
     width: 100%;
     padding: 10px;
     flex-direction: column;
+    gap: 1rem;
   }
 
   .textContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    height: 50%;
 
     @include mobile {
-      gap: 20px;
+      gap: 1rem;
       text-align: center;
       align-items: center;
-      margin-top: 70px;
+      margin-top: 3rem;
+      // font-size: .8rem;
     }
 
     h1 {
-      font-size: 100px;
-      line-height: 88px;
+      font-size: 6rem;
+      line-height: 6rem;
+
+      @include tablet {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
 
       @include mobile {
-        font-size: 36px;
+        font-size: 2rem;
       }
     }
 
     span {
-      font-weight: 300;
+      font-weight: 600;
+      color: rgb(158 61 255);
     }
   }
 
   .formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 50%;
     flex: 1;
     position: relative;
-    
+
     @include mobile {
-      padding: 50px;
+      padding: 1rem 3rem;
       width: 100%;
     }
 
-
     .phoneSvg {
-      stroke: orange;
+      stroke: rgb(158 61 255);
       position: absolute;
-      margin: auto;
+      // text-align: center;
+      // top: 0%;
+      // margin: auto;
       z-index: -1;
     }
 
     form {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      width: 100%;
       gap: 20px;
 
       input,
@@ -70,22 +91,46 @@
         border: 1px solid white;
         color: white;
         border-radius: 5px;
+        resize: none;
+        outline: none;
 
         @include mobile {
           padding: 10px;
         }
+      }
+
+      input,
+      textarea:hover {
+        cursor: text !important;
+      }
+
+      input,
+      textarea:active {
+        cursor: text !important;
       }
 
       button {
-        padding: 20px;
-        border: none;
-        background-color: orange;
-        cursor: pointer;
-        font-weight: 500;
-        @include mobile {
-          padding: 10px;
-        }
+        padding: 10px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        background-color: rgb(158 61 255);
+        color: white;
+        font-size: 1rem;
+        // margin-right: 1rem;
+        font-weight: 800;
+        //cursor: none;
+        transition: all .4s;
       }
+
+      button:hover {
+        background-color: transparent;
+        color: rgb(158 61 255);
+        border: 2px solid rgb(158 61 255);
+      }
+    }
+
+    form:hover {
+      cursor: text !important;
     }
   }
 }

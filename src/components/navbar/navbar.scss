@@ -1,7 +1,15 @@
 @import "../../app.scss";
 
 .navbar {
-  height: 100px;
+  height: 4rem;
+  position: absolute !important;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  top: 10px;
+  // left: 0px;
+  z-index: 10;
+  // background-color: rgba(158, 61, 255, 0.656);
 
   .wrapper {
     // max-width: 1366px;
@@ -11,7 +19,7 @@
     justify-content: space-between;
     height: 100%;
     padding: 0 2rem;
-    padding-left: 8rem;
+    // padding-left: 8rem;
 
     @include mobile {
       justify-content: flex-end;
@@ -26,23 +34,64 @@
       }
     }
 
-    .social {
+    .nav-items {
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
 
-      a{
+      @include mobile {
+        display: none;
+      }
+
+      a {
+        background-color: transparent;
+        padding: .8rem 1rem;
+        // color: white;
+        color: rgb(158 61 255);
         text-decoration: none;
         transition: all ease-in-out .2s;
+        border: none;
+        font-weight: bold;
+        font-size: 1.6rem;
+        // letter-spacing: .00rem;
+        border-radius: 5px;
+
+        @include tablet {
+          font-size: 1.2rem;
+          font-weight: 800;
+        }
       }
 
-      a:hover{
-        transform: scale(1.3);
+      a:hover {
+        color: white;
       }
+    }
 
-      i,img {
-        font-size: 2rem;
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.3rem;
+
+      a {
+        text-decoration: none;
+        transition: all ease-in-out .2s;
         width: 30px;
         height: 30px;
+      }
+
+      a:hover {
+        transform: scale(1.5);
+      }
+
+      i{
+        font-size: 2rem;
+      }
+      
+      img{
+        width: 100%;
+        height: 100%;
       }
     }
   }
