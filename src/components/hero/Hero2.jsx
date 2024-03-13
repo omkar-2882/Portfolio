@@ -73,7 +73,7 @@ const Hero2 = () => {
                         <motion.h1 className='skill' variants={textVariants}>Web Developer</motion.h1>
                         <motion.div variants={textVariants} className="buttons">
                             <motion.button variants={textVariants}>
-                                <a href="https://drive.google.com/file/d/1iCR7DRrpV6Wu2jPl3tNUtDtVOMV4HgjV/view?usp=drive_link" target="_blank">Resume</a>
+                                <a href="https://drive.google.com/file/d/1ibCfLvQhxudZOHjowbxAL51I-5KHaAmB/view?usp=sharing" target="_blank">Resume</a>
                             </motion.button>
                             <motion.button variants={textVariants}>
                                 <a href="#Contact">Contact Me</a>
